@@ -360,8 +360,9 @@ const TeamPage = ({ tweaks }) => {
       </div>
     </div>
   );
+
   const alumni = [
-    { name: 'Ferhat Erata', dest: 'Applied Scientist, AWS Agentic AI, Automated Reasoning Group & Kiro Science', 'PhD 2025' , 'https://ferhat.ai'},
+    { name: 'Ferhat Erata', dest: 'Applied Scientist, AWS Agentic AI, Automated Reasoning Group \& Kiro Science', 'PhD 2025' , 'https://ferhat.ai'},
     { name: 'John Kolesar', dest: 'Applied Scientist, AWS Automated Reasoning Group, Bespoke Proofs', 'PhD 2026', 'https://johnckolesar.github.io'},
     { name: 'Samuel Judson', dest: 'Machine Learning Security Researcher at Trail of Bits', 'PhD 2024' , 'https://sjudson.com'},
     { name: 'Jialu Zhang', dest: 'Assistant Professor at University of Waterloo', 'PhD 2023', 'https://jialuzhang.netlify.app'},
