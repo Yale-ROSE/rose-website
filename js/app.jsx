@@ -501,7 +501,8 @@ const App = () => {
   }, [tweaks.accent, tweaks.font]);
 
   // const pages = { Home: HomePage, Research: ResearchPage, Publications: PublicationsPage, Funding: FundingPage, Team: TeamPage };
-  const pages = { Home: HomePage, Research: ResearchPage, Publications: PublicationsPage, Team: TeamPage };
+  // const pages = { Home: HomePage, Research: ResearchPage, Publications: PublicationsPage, Team: TeamPage };
+  const pages = { Home: HomePage, Publications: PublicationsPage, Team: TeamPage };
   const PageComp = pages[page] || HomePage;
 
   return (
