@@ -460,12 +460,24 @@ const NewsPage = ({ tweaks }) => {
 };
 
 const App = () => {
-  const [page, setPage] = React.useState(() => localStorage.getItem('rose_page') || 'Home');
+  const [page, setPage] = React.useState(() => {
+    const h = window.location.hash.replace('#', '');
+    return ['Home', 'Publications', 'Team'].includes(h) ? h : 'Home';
+  });
   const [tweaks, setTweaks] = React.useState(TWEAK_DEFAULTS);
 
   React.useEffect(() => {
-    localStorage.setItem('rose_page', page);
+    window.location.hash = page;
   }, [page]);
+
+  React.useEffect(() => {
+    const onHash = () => {
+      const h = window.location.hash.replace('#', '');
+      if (['Home', 'Publications', 'Team'].includes(h)) setPage(h);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
 
   // Tweaks wiring
   React.useEffect(() => {
