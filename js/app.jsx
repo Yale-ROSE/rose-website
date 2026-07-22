@@ -193,6 +193,7 @@ const themeTagMeta = {
   security:     { label: 'Security',     color: '#a03030' },
   networks:     { label: 'Network Verification', color: '#b45309' },
   synthesis: { label: 'Program Synthesis', color: '#7c5295' },
+  education: { label: 'CS Education', color: '#557a8a' },
 };
 
 const PubEntry = ({ n, authors, title, venue, year, bib, doi, http, arxiv, pdf, themes }) => {
