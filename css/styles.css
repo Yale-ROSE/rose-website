@@ -1,0 +1,137 @@
+@font-face { font-family: 'Mallory'; src: local('Mallory Book'), local('Mallory'); font-weight: 400; font-style: normal; }
+  @font-face { font-family: 'Mallory'; src: local('Mallory Italic'), local('Mallory'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Mallory'; src: local('Mallory Bold'), local('Mallory'); font-weight: 700; font-style: normal; }
+  @font-face { font-family: 'Mallory'; src: local('Mallory Bold Italic'), local('Mallory'); font-weight: 700; font-style: italic; }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 19px; }
+  html, body { overflow-x: hidden; max-width: 100%; }
+  body { font-family: 'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; background: #f9f9f7; color: #1a1a1a; -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; }
+  a { color: #286DC0; text-decoration: none; }
+  a:hover { color: #00356B; text-decoration: underline; }
+  hr { border: none; border-top: 1px solid #e8e8e4; }
+
+  /* Tweaks panel */
+  #tweaks-panel {
+    display: none; position: fixed; bottom: 20px; right: 20px;
+    background: white; border: 1px solid #e8e8e4; box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 16px; width: 240px; z-index: 9999; border-radius: 2px;
+  }
+  #tweaks-panel.visible { display: block; }
+  #tweaks-panel h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #767674; margin-bottom: 12px; }
+  .tweak-row { margin-bottom: 10px; }
+  .tweak-row label { font-size: 14px; color: #3a3a38; display: block; margin-bottom: 3px; }
+  .tweak-row select, .tweak-row input { width: 100%; font-size: 14px; padding: 4px 6px; border: 1px solid #e8e8e4; border-radius: 2px; font-family: inherit; color: #1a1a1a; }
+  .tweak-row input[type=color] { height: 28px; padding: 1px 3px; cursor: pointer; }
+
+  /* ============================================================
+     MOBILE RESPONSIVE
+     ============================================================ */
+
+  /* Hamburger button, hidden on desktop */
+  #mobile-menu-btn {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    padding: 8px; margin-left: auto;
+    flex-direction: column; gap: 5px;
+  }
+  #mobile-menu-btn span {
+    display: block; width: 22px; height: 2px;
+    background: #00356B; border-radius: 1px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  #mobile-menu-btn.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #mobile-menu-btn.open span:nth-child(2) { opacity: 0; }
+  #mobile-menu-btn.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile nav drawer */
+  #mobile-nav {
+    display: none;
+    flex-direction: column;
+    background: #00244a;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 0 12px;
+  }
+  #mobile-nav.open { display: flex; }
+  #mobile-nav a {
+    font-family: 'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px; color: rgba(255,255,255,0.8);
+    padding: 10px 24px;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+  }
+  #mobile-nav a:hover,
+  #mobile-nav a.active { color: white; border-left-color: white; font-weight: 600; }
+
+  @media (max-width: 760px) {
+    /* Show hamburger, hide desktop nav */
+    #mobile-menu-btn { display: flex; }
+    #desktop-nav { display: none !important; }
+
+    /* Header inner: tighten padding so brand fits narrow screens */
+    .header-inner { padding: 0 16px !important; min-height: 64px !important; }
+
+    /* Stack layout, sidebar goes below content */
+    .page-layout {
+      flex-direction: column !important;
+      gap: 0 !important;
+      padding: 20px 16px !important;
+    }
+    .page-sidebar {
+      width: 100% !important;
+      border-right: none !important;
+      border-bottom: 1px solid #e8e8e4;
+      padding-right: 0 !important;
+      padding-bottom: 20px !important;
+      margin-bottom: 24px !important;
+      order: 2;
+    }
+    /* Sidebar people list: 2-col grid on mobile */
+    .page-sidebar .person { display: inline-block; width: 48%; }
+
+    /* Header brand area */
+    .header-brand {
+      width: auto !important;
+      padding: 10px 16px 10px 0 !important;
+    }
+    .header-brand-sub { display: none !important; }
+
+    /* Page h1 */
+    h1 { font-size: 31px !important; }
+
+    /* Research area entries: stack thumb above text */
+    .research-entry { flex-direction: column !important; }
+    .research-thumb { width: 100% !important; height: 140px !important; }
+
+    /* News feed: date stacks above the item */
+    .news-entry { flex-direction: column !important; gap: 6px !important; }
+    .news-date { width: auto !important; padding-top: 0 !important; }
+
+    /* Research projects: remove text-column indent when stacked */
+    .research-projects { padding-left: 0 !important; }
+
+    /* Publications table, wrap long strings, no overflow */
+    table { width: 100% !important; }
+    td { font-size: 17px !important; overflow-wrap: anywhere; word-break: break-word; }
+
+    /* Highlights grid */
+    .highlights-grid { grid-template-columns: 1fr !important; }
+
+    /* Team avatar row */
+    .team-entry { flex-wrap: wrap; }
+
+    /* Footer */
+    footer > div { flex-direction: column !important; gap: 12px !important; }
+    footer > div > div:last-child { text-align: left !important; }
+
+    /* Tweaks panel */
+    #tweaks-panel { width: calc(100vw - 32px); right: 16px; bottom: 16px; }
+  }
+
+  @media (max-width: 960px) and (min-width: 761px) {
+    .page-layout { padding: 28px 20px !important; gap: 28px !important; }
+    .page-sidebar { width: 180px !important; }
+    .header-brand { width: 208px !important; }
+    .header-inner { padding: 0 20px !important; }
+  }

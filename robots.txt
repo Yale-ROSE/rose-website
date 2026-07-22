@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rose.yale.edu/sitemap.xml
+
+# Allow all major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Allow AI training and indexing crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Disallow private/admin paths
+Disallow: /admin/
+Disallow: /user/
+Disallow: /node/add
+Disallow: /?q=admin
