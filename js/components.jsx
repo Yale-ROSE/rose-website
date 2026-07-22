@@ -114,6 +114,79 @@ function Footer() {
 
 // ===== ResearchArea.jsx =====
 // ResearchArea.jsx — research theme entry: large thumbnail + text row, projects below
+// function ResearchArea({ title, url, thumb, projects, children }) {
+//   const [expanded, setExpanded] = React.useState(false);
+
+//   return (
+//     <div style={{ marginBottom: 32, paddingBottom: 32, borderBottom: '1px solid #e8e8e4' }}>
+
+//       {/* Image + Title/Description/LearnMore — flex row, image stretches to match text height */}
+//       <div className="research-entry" style={{ display: 'flex', gap: 24, alignItems: 'stretch' }}>
+
+//         {/* Thumbnail: stretches to match text column height */}
+//         <div className="research-thumb" style={{
+//           width: 240, flexShrink: 0, alignSelf: 'stretch',
+//           background: '#f4f3ef', border: '1px solid #e8e8e4',
+//           overflow: 'hidden'
+//         }}>
+//           {thumb
+//             ? <img src={thumb} alt={title} style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center', display: 'block' }} />
+//             : <span style={{ display: 'block', padding: 12, fontFamily: 'monospace', fontSize: 19, color: '#286DC0', opacity: 0.6 }}>{title.slice(0,2).toUpperCase()}</span>
+//           }
+//         </div>
+
+//         {/* Text: title + description (clamped) + Learn more */}
+//         <div style={{ flex: 1, minWidth: 0 }}>
+//           <h3 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 20, fontWeight: 600, marginBottom: 8, lineHeight: 1.3 }}>
+//             <a href={url || '#'} style={{ color: '#286DC0', textDecoration: 'none' }}
+//               onMouseEnter={e => { e.currentTarget.style.color='#00356B'; e.currentTarget.style.textDecoration='underline'; }}
+//               onMouseLeave={e => { e.currentTarget.style.color='#286DC0'; e.currentTarget.style.textDecoration='none'; }}>
+//               {title}
+//             </a>
+//           </h3>
+//           <div style={{
+//             fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+//             fontSize: 17, color: '#3a3a38', lineHeight: 1.65,
+//             overflow: 'hidden',
+//             display: expanded ? 'block' : '-webkit-box',
+//             WebkitLineClamp: expanded ? 'unset' : 4,
+//             WebkitBoxOrient: 'vertical',
+//           }}>
+//             {children}
+//           </div>
+//           <button onClick={() => setExpanded(!expanded)} style={{
+//             fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
+//             fontSize: 16, color: '#286DC0', background: 'none',
+//             border: 'none', padding: '6px 0 0', cursor: 'pointer', display: 'block'
+//           }}>
+//             {expanded ? 'Show less' : 'Learn more \u2192'}
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* Projects — full-width row below the image+text */}
+//       {projects && projects.length > 0 && (
+//         <div className="research-projects" style={{ marginTop: 14, paddingLeft: 264 }}>
+//           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#9a9a96', marginBottom: 6 }}>Papers</div>
+//           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 5 }}>
+//             {projects.map(p => (
+//               <li key={p.title} style={{ position: 'relative', paddingLeft: 14 }}>
+//                 <span style={{ position: 'absolute', left: 0, top: 0, color: '#b0b0aa' }}>{String.fromCharCode(8250)}</span>
+//                 <a href={p.url || '#'} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 15, color: '#286DC0', textDecoration: 'none' }}
+//                   onMouseEnter={e => { e.currentTarget.style.color='#00356B'; e.currentTarget.style.textDecoration='underline'; }}
+//                   onMouseLeave={e => { e.currentTarget.style.color='#286DC0'; e.currentTarget.style.textDecoration='none'; }}>
+//                   {p.title}
+//                 </a>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
+//       )}
+
+//     </div>
+//   );
+// }
+
 function ResearchArea({ title, url, thumb, projects, children }) {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -123,17 +196,16 @@ function ResearchArea({ title, url, thumb, projects, children }) {
       {/* Image + Title/Description/LearnMore — flex row, image stretches to match text height */}
       <div className="research-entry" style={{ display: 'flex', gap: 24, alignItems: 'stretch' }}>
 
-        {/* Thumbnail: stretches to match text column height */}
-        <div className="research-thumb" style={{
-          width: 240, flexShrink: 0, alignSelf: 'stretch',
-          background: '#f4f3ef', border: '1px solid #e8e8e4',
-          overflow: 'hidden'
-        }}>
-          {thumb
-            ? <img src={thumb} alt={title} style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center', display: 'block' }} />
-            : <span style={{ display: 'block', padding: 12, fontFamily: 'monospace', fontSize: 19, color: '#286DC0', opacity: 0.6 }}>{title.slice(0,2).toUpperCase()}</span>
-          }
-        </div>
+        {/* Thumbnail: only rendered when a thumb is provided */}
+        {thumb && (
+          <div className="research-thumb" style={{
+            width: 240, flexShrink: 0, alignSelf: 'stretch',
+            background: '#f4f3ef', border: '1px solid #e8e8e4',
+            overflow: 'hidden'
+          }}>
+            <img src={thumb} alt={title} style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center', display: 'block' }} />
+          </div>
+        )}
 
         {/* Text: title + description (clamped) + Learn more */}
         <div style={{ flex: 1, minWidth: 0 }}>
@@ -166,7 +238,7 @@ function ResearchArea({ title, url, thumb, projects, children }) {
 
       {/* Projects — full-width row below the image+text */}
       {projects && projects.length > 0 && (
-        <div className="research-projects" style={{ marginTop: 14, paddingLeft: 264 }}>
+        <div className="research-projects" style={{ marginTop: 14, paddingLeft: thumb ? 264 : 0 }}>
           <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#9a9a96', marginBottom: 6 }}>Papers</div>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 5 }}>
             {projects.map(p => (
