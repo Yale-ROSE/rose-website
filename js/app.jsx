@@ -336,12 +336,12 @@ const TeamPage = ({ tweaks }) => {
     { name: 'Timos Antonopoulos', role: 'Research Scientist and Lecturer', research: 'Formal verification, automated reasoning, zero-knowledge proofs, legal accountability, MaxSAT', url: 'https://www.cs.yale.edu/homes/antonopoulos-timos/', group: 'faculty' },
     { name: 'Topher Allen', role: 'Undergraduate Student', research: 'Formal methods for verifiable AI policy, rigorous proof techniques as evidentiary foundation for AI governance.', url: '', group: 'student' },
     { name: 'Katie Brady', role: 'PhD Student', research: 'Automated reasoning, agentic AI systems, data proxy discovery and validation (Environmental Performance Index)', url: '', group: 'student' },
-    { name: 'Sam Kouteili', role: 'PhD Student', research: 'Neurosymbolic learning, transformers for SAT solving, specification mining, EPI data-proxy pipeline', url: '', group: 'student' },
+    { name: 'Sam Kouteili', role: 'PhD Student (on leave)', research: 'Neurosymbolic learning, transformers for SAT solving, specification mining, EPI data-proxy pipeline', url: '', group: 'student' },
     { name: 'Daniel Luick', role: 'PhD Student', research: 'Zero-knowledge proofs, SMT verification', url: '#', group: 'student' },
     { name: 'Stephen Miner', role: 'PhD Student', research: 'Formal methods and AI applied to biology, program synthesis and reachability analysis for cancer-cell modeling', url: '', group: 'student' },
     { name: 'Jordan Schmerge', role: 'PhD Student', research: 'Privacy-preserving automated reasoning; MaxSAT for compliance checking', url: '', group: 'student' },
     { name: 'Thanos Typaldos', role: 'PhD Student', research: 'Neurosymbolic programming and program verification, Rust idiomaticity, learning reductions, cubing, Blaise', url: 'https://github.com/actyp', group: 'student' },
-    { name: 'Youwei Zhong', role: 'PhD Student', research: 'Custom zero-knowledge protocols for verifying safety and privacy properties of proprietary AI systems', url: '', group: 'student' },
+    { name: 'Youwei Zhong', role: 'PhD Student', research: 'Custom zero-knowledge protocols for verifying safety and privacy properties of proprietary AI systems', url: 'https://ywzh.org', group: 'student' },
   ];
   const faculty = members.filter(m => m.group === 'faculty');
   const students = members.filter(m => m.group === 'student');
@@ -393,7 +393,10 @@ const TeamPage = ({ tweaks }) => {
         <h6 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#767674', marginBottom: 16 }}>Alumni</h6>
         {alumni.map(a => (
           <div key={a.name} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, marginBottom: 8, color: '#1a1a1a' }}>
-            {a.name} <span style={{ color: '#767674', fontSize: 16 }}>({a.year})</span><span style={{ color: '#767674', fontSize: 16 }}>→ {a.dest}</span>
+            {a.url
+              ? <a href={a.url} target="_blank" rel="noopener noreferrer" style={{ color: '#286DC0', textDecoration: 'none' }}>{a.name}</a>
+              : a.name}
+            {' '}<span style={{ color: '#767674', fontSize: 16 }}>({a.year})</span><span style={{ color: '#767674', fontSize: 16 }}>→ {a.dest}</span>
           </div>
         ))}
       </main>
