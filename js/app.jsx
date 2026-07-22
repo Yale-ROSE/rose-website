@@ -46,19 +46,19 @@ const HomePage = ({ tweaks }) => {
         {/* Research Themes */}
         <div>
           <h2 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 28, fontWeight: 500, color: '#1a1a1a', margin: '0 0 20px' }}>Research Themes</h2>
-          <ResearchArea title="Privacy-Preserving Formal Methods" url="#" thumb="" projects={projectLinks.filter(p => p.theme === 'privacy')}>
+          <ResearchArea title="Privacy-Preserving Formal Methods" url="#" thumb="" projects={allPubs.filter(p => (p.themes || []).includes('privacy')).sort((a, b) => b.year - a.year).slice(0, 4).map(p => ({ title: p.title, url: p.pdf && p.pdf !== '#' ? p.pdf : '#' }))}>
             Cryptographic and formal techniques, zero-knowledge proofs and secure multi-party computation, that let one party prove a computation was carried out correctly without revealing the inputs, the program, or any private data. Roughly half of this thread is multi-party computation rather than zero-knowledge alone. Recent work includes <em>ZKSMT</em> (USENIX Security 2024), <em>Coinductive Proofs of Regex Equivalence in Zero Knowledge</em> (OOPSLA 2025), <em>Privacy-Preserving SAT Solving</em> (invited talks at SAT 2025 and CP 2025), and custom protocols for verifying private AI models without exposing their weights. Lab members on this thread: Youwei Zhong, Jordan Schmerge.
           </ResearchArea>
 
-          <ResearchArea title="ML/AI + Formal Methods" url="#" thumb="" projects={projectLinks.filter(p => p.theme === 'mlai')}>
+          <ResearchArea title="ML/AI + Formal Methods" url="#" thumb="" projects={allPubs.filter(p => (p.themes || []).includes('mlai')).sort((a, b) => b.year - a.year).slice(0, 4).map(p => ({ title: p.title, url: p.pdf && p.pdf !== '#' ? p.pdf : '#' }))}>
             Using machine learning to make automated reasoning faster and more powerful, and using formal guarantees to make learning trustworthy. SAT/SMT solvers underpin verification, security, and scientific computing, so treating them as targets for learning opens new performance frontiers. Active projects include <em>Learning Randomized Reductions</em> (with Shafi Goldwasser), <em>Learning How to Cube SAT</em> (with Amazon Trusted Solvers), transformer-based SAT solving, and <em>Blaise</em>. Lab members: Sam Kouteili, Thanos Typaldos.
           </ResearchArea>
 
-          <ResearchArea title="Neurosymbolic AI" url="#" thumb="" projects={projectLinks.filter(p => p.theme === 'neuro')}>
+          <ResearchArea title="Neurosymbolic AI" url="#" thumb="" projects={allPubs.filter(p => (p.themes || []).includes('neuro')).sort((a, b) => b.year - a.year).slice(0, 4).map(p => ({ title: p.title, url: p.pdf && p.pdf !== '#' ? p.pdf : '#' }))}>
             Combining learning with symbolic reasoning to attack problems that neither approach handles well alone, across very different disciplines. Current work spans agentic discovery and verification of environmental data proxies for the Yale Environmental Performance Index, formal methods for biology (program synthesis and reachability analysis for cancer-cell models that biologists can mathematically trust), and reasoning systems that bring this lens to law. <em>NeuroStrata</em> for autonomous cyber-physical systems (FSE 2025, with Miroslav Pajic) sits here too. Lab members: Katie Brady, Sam Kouteili, Stephen Miner.
           </ResearchArea>
 
-          <ResearchArea title="Formal Methods for Accountable Decision-Making" url="#" thumb="" projects={projectLinks.filter(p => p.theme === 'law')}>
+          <ResearchArea title="Formal Methods for Accountable Decision-Making" url="#" thumb="" projects={allPubs.filter(p => (p.themes || []).includes('law')).sort((a, b) => b.year - a.year).slice(0, 4).map(p => ({ title: p.title, url: p.pdf && p.pdf !== '#' ? p.pdf : '#' }))}>
             Using automated reasoning to make algorithmic decisions, whether by AI systems, by autonomous vehicles, or by software in regulated settings, legally inspectable and accountable. In a multi-year collaboration with Prof. Scott Shapiro (Yale Law School), we build SMT-based oracles and autoformalization tools that let courts and regulators interrogate software the way they interrogate witnesses. Recent papers: <em>soid</em> (CAV 2024), <em>"Put the Car on the Stand": SMT-based Oracles for Investigating Decisions</em> (CSLAW 2024), <em>Scheherazade</em>, and <em>CourtReasoner: Can LLM Agents Reason Like Judges?</em> (EMNLP 2025).
           </ResearchArea>
         </div>
@@ -87,7 +87,7 @@ const HomePage = ({ tweaks }) => {
             <h6 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#767674', margin: 0 }}>Collaborators &amp; Partners</h6>
           </div>
           <p style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 16, color: '#3a3a38', lineHeight: 1.65, marginBottom: 14 }}>
-            A defining feature of ROSE is how widely it reaches across Yale. The group partners with the Law School, environmental policy through the Yale Environmental Performance Index, biomedical informatics and data science (BIDS), and the School of Management, alongside longstanding external collaborators with whom we have received funding or co-authored a paper.
+            A defining feature of ROSE is how widely it reaches across Yale. The group partners with the Law School, environmental policy through the Yale Environmental Performance Index, Biomedical Informatics and Data Science (BIDS), and the School of Management, alongside longstanding external collaborators.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px 24px' }}>
             {[
