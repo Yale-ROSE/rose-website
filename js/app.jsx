@@ -191,17 +191,19 @@ const themeTagMeta = {
   law:     { label: 'Accountability',    color: '#8a6000' },
 };
 
-const PubEntry = ({ n, authors, title, venue, bib, doi, http, arxiv, themes }) => {
+const PubEntry = ({ n, authors, title, venue, year, bib, doi, http, arxiv, pdf, themes }) => {
   const tags = (Array.isArray(themes) ? themes : [themes]).filter(Boolean).map(t => themeTagMeta[t]).filter(Boolean);
+  const hasBib = bib && bib !== '#';
   return (
   <tr>
     <td style={{verticalAlign:'top',paddingRight:12,paddingBottom:14,color:'#767674',fontFamily:"'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",fontSize:16,whiteSpace:'nowrap',width:32}}>[{n}]</td>
     <td style={{verticalAlign:'top',paddingBottom:14,fontFamily:"'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",fontSize:17,lineHeight:1.55,color:'#1a1a1a'}}>
       {authors}.<br/>
       <span style={{fontWeight:600}}>{title}</span><br/>
-      <span style={{color:'#3a3a38',fontStyle:'italic'}}>{venue}</span>
-      {(bib||doi||http||arxiv) && <span style={{marginLeft:4}}>
-        {bib && pubLink('bib', bib)}
+      <span style={{color:'#3a3a38',fontStyle:'italic'}}>{venue}{year ? ' ' + year : ''}</span>
+      {(pdf||hasBib||doi||http||arxiv) && <span style={{marginLeft:4}}>
+        {pdf && pubLink('pdf', pdf)}
+        {hasBib && pubLink('bib', bib)}
         {doi && pubLink('DOI', doi)}
         {(http||arxiv) && pubLink('http', http||arxiv)}
       </span>}
