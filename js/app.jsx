@@ -198,8 +198,8 @@ const PubEntry = ({ n, authors, title, venue, year, bib, doi, http, arxiv, pdf, 
   <tr>
     <td style={{verticalAlign:'top',paddingRight:12,paddingBottom:14,color:'#767674',fontFamily:"'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",fontSize:16,whiteSpace:'nowrap',width:32}}>[{n}]</td>
     <td style={{verticalAlign:'top',paddingBottom:14,fontFamily:"'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",fontSize:17,lineHeight:1.55,color:'#1a1a1a'}}>
-      {authors}.<br/>
       <span style={{fontWeight:600}}>{title}</span><br/>
+      {authors}.<br/>
       <span style={{color:'#3a3a38',fontStyle:'italic'}}>{venue}{year ? ' ' + year : ''}</span>
       {(pdf||hasBib||doi||http||arxiv) && <span style={{marginLeft:4}}>
         {pdf && pubLink('pdf', pdf)}
@@ -336,6 +336,49 @@ const allPubs = [
   { authors:'ThanhVu Nguyen, Timos Antonopoulos, Andrew Ruef, Michael Hicks', title:'Counterexample-guided Approach to Finding Numerical Invariants', venue:'FSE', year:2017, pdf:'https://www.cs.yale.edu/homes/antonopoulos-timos/FSE-2017.pdf', bib:'#', themes:['mlai'] },
   { authors:'Dana Angluin, Timos Antonopoulos, Dana Fisman', title:'Query Learning of Derived ω-Tree Languages in Polynomial Time', venue:'CSL', year:2017, pdf:'https://www.cs.yale.edu/homes/antonopoulos-timos/CSL-2017.pdf', bib:'#', themes:['mlai'] },
   { authors:'Timos Antonopoulos, Paul Gazzillo, Michael Hicks, Eric Koskinen, Tachio Terauchi, Shiyi Wei', title:'Decomposition Instead of Self-Composition for Proving the Absence of Timing Channels', venue:'PLDI', year:2017, pdf:'https://www.cs.yale.edu/homes/antonopoulos-timos/PLDI-2017.pdf', bib:'#', themes:['privacy'] },
+  { authors:'Jialu Zhang, José Pablo Cambronero, Sumit Gulwani, Vu Le, Ruzica Piskac, Gustavo Soares, Gust Verbruggen', title:'PyDex: Repairing Bugs in Introductory Python Assignments using LLMs', venue:'OOPSLA', year:2024, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ferhat Erata, Chuanqi Xu, Ruzica Piskac, Jakub Szefer', title:'Quantum Circuit Reconstruction from Power Side-Channel Attacks on Quantum Computer Controllers', venue:'TCHES 2024(2)', year:2024, pdf:'#', bib:'#', themes:['privacy'] },
+  { authors:'Ning Luo, Chenkai Weng, Jaspal Singh, Gefei Tan, Mariana Raykova, Ruzica Piskac', title:'Privacy-Preserving Regular Expression Matching Using TNFA', venue:'ESORICS', year:2024, pdf:'#', bib:'#', themes:['privacy'] },
+  { authors:'Xi Zheng, Aloysius K. Mok, Ruzica Piskac, Yong Jae Lee, Bhaskar Krishnamachari, Dakai Zhu, Oleg Sokolsky, Insup Lee', title:'Testing Learning-Enabled Cyber-Physical Systems with Large-Language Models: A Formal Approach', venue:'FSE Companion', year:2024, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Haoran Ding, Zhaoguo Wang, Yicun Yang, Dexin Zhang, Zhenglin Xu, Haibo Chen, Ruzica Piskac, Jinyang Li', title:'Proving Query Equivalence Using Linear Integer Arithmetic', venue:'SIGMOD', year:2023, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ferhat Erata, Eren Yildiz, Arda Goknil, Kasim Sinan Yildirim, Jakub Szefer, Ruzica Piskac, Gökçin Sezgin', title:'ETAP: Energy-aware Timing Analysis of Intermittent Programs', venue:'TECS 22(2)', year:2023, pdf:'#', bib:'#', themes:['privacy'] },
+  { authors:'Ferhat Erata, Ruzica Piskac, Víctor Mateu, Jakub Szefer', title:'Towards Automated Detection of Single-Trace Side-Channel Vulnerabilities in Constant-Time Cryptographic Code', venue:'EuroS&P', year:2023, pdf:'#', bib:'#', themes:['privacy'] },
+  { authors:'Katrine Bjørner, Samuel Judson, Filip Cano, Drew Goldman, Nicholas Shoemaker, Ruzica Piskac, Bettina Könighofer', title:'Formal XAI via Syntax-Guided Synthesis', venue:'AISoLA', year:2023, pdf:'#', bib:'#', themes:['law'] },
+  { authors:'John C. Kolesar, Ruzica Piskac, William T. Hallahan', title:'Checking equivalence in a non-strict language', venue:'OOPSLA', year:2022, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Jialu Zhang, Todd Mytkowicz, Mike Kaufman, Ruzica Piskac, Shuvendu K. Lahiri', title:'Using pre-trained language models to resolve textual and semantic merge conflicts (experience paper)', venue:'ISSTA', year:2022, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Jialu Zhang, De Li, John Charles Kolesar, Hanyuan Shi, Ruzica Piskac', title:'Automated Feedback Generation for Competition-Level Code', venue:'ASE', year:2022, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Wonhyuk Choi, Bernd Finkbeiner, Ruzica Piskac, Mark Santolucito', title:'Can reactive synthesis and syntax-guided synthesis be friends?', venue:'PLDI', year:2022, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, Jialu Zhang, Ennan Zhai, Jürgen Cito, Ruzica Piskac', title:'Learning CI Configuration Correctness for Early Build Feedback', venue:'SANER', year:2022, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Jialu Zhang, Ruzica Piskac, Ennan Zhai, Tianyin Xu', title:'Static detection of silent misconfigurations with deep interaction analysis', venue:'OOPSLA', year:2021, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Eric Hayden Campbell, William T. Hallahan, Priya Srikumar, Carmelo Cascone, Jed Liu, Vignesh Ramamurthy, Hossein Hojjat, Ruzica Piskac, Robert Soulé, Nate Foster', title:'Avenir: Managing Data Plane Diversity with Control Plane Synthesis', venue:'NSDI', year:2021, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Julien Lepiller, Ruzica Piskac, Martin Schäf, Mark Santolucito', title:'Analyzing Infrastructure as Code to Prevent Intra-update Sniping Vulnerabilities', venue:'TACAS', year:2021, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'William T. Hallahan, Ennan Zhai, Ruzica Piskac', title:'Automated repair by example for firewalls', venue:'FMSD 56(1)', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Kairo Morton, William T. Hallahan, Elven Shum, Ruzica Piskac, Mark Santolucito', title:'Grammar Filtering for Syntax-Guided Synthesis', venue:'AAAI', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ruzica Piskac', title:'Efficient Automated Reasoning About Sets and Multisets with Cardinality Constraints', venue:'IJCAR', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ennan Zhai, Ang Chen, Ruzica Piskac, Mahesh Balakrishnan, Bingchuan Tian, Bo Song, Haoliang Zhang', title:'Check before You Change: Preventing Correlated Failures in Service Updates', venue:'NSDI', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Nicholas Shoemaker, Ruzica Piskac, Mark Santolucito', title:'Towards checkpoint placement for dynamic memory allocation in intermittent computing', venue:'TAPAS', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, Ruzica Piskac', title:'Formal Methods and Computing Identity-based Mentorship for Early Stage Researchers', venue:'SIGCSE', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Maxwell Levatich, Nikolaj S. Bjørner, Ruzica Piskac, Sharon Shoham', title:'Solving LIA* Using Approximations', venue:'VMCAI', year:2020, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Bernd Finkbeiner, Felix Klein, Ruzica Piskac, Mark Santolucito', title:'Temporal Stream Logic: Synthesis Beyond the Bools', venue:'CAV', year:2019, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, William T. Hallahan, Ruzica Piskac', title:'Live Programming By Example', venue:'CHI Extended Abstracts', year:2019, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'William T. Hallahan, Anton Xue, Ruzica Piskac', title:'G2Q: Haskell constraint solving', venue:'Haskell@ICFP', year:2019, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Bernd Finkbeiner, Felix Klein, Ruzica Piskac, Mark Santolucito', title:'Synthesizing functional reactive programs', venue:'Haskell@ICFP', year:2019, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'William T. Hallahan, Anton Xue, Maxwell Troy Bland, Ranjit Jhala, Ruzica Piskac', title:'Lazy counterfactual symbolic execution', venue:'PLDI', year:2019, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, Kate Rogers, Aedan Lombardo, Ruzica Piskac', title:'Programming-by-example for audio: synthesizing digital signal processing programs', venue:'FARM@ICFP', year:2018, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, Drew Goldman, Allyson Weseley, Ruzica Piskac', title:'Programming by Example: Efficient, but Not "Helpful"', venue:'PLATEAU@SPLASH', year:2018, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ruzica Piskac', title:'New Applications of Software Synthesis: Verification of Configuration Files and Firewall Repair', venue:'SAS', year:2018, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, Ennan Zhai, Rahul Dhodapkar, Aaron Shim, Ruzica Piskac', title:'Synthesizing configuration file specifications with association rule learning', venue:'OOPSLA', year:2017, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ennan Zhai, Ruzica Piskac, Ronghui Gu, Xun Lao, Xi Wang', title:'An auditing language for preventing correlated failures in the cloud', venue:'OOPSLA', year:2017, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Bernd Finkbeiner, Felix Klein, Ruzica Piskac, Mark Santolucito', title:'Vehicle Platooning Simulations with Functional Reactive Programming', venue:'SCAV@CPSWeek', year:2017, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'William T. Hallahan, Ennan Zhai, Ruzica Piskac', title:'Automated repair by example for firewalls', venue:'FMCAD', year:2017, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Mark Santolucito, Ennan Zhai, Ruzica Piskac', title:'Probabilistic Automated Language Learning for Configuration Files', venue:'CAV', year:2016, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Alex Reinking, Ruzica Piskac', title:'A Type-Directed Approach to Program Repair', venue:'CAV', year:2015, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Sumit Gulwani, Mikaël Mayer, Filip Niksic, Ruzica Piskac', title:'StriSynth: Synthesis for Live Programming', venue:'ICSE', year:2015, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Tihomir Gvero, Viktor Kuncak, Ivan Kuraj, Ruzica Piskac', title:'InSynth: A System for Code Completion using Types and Weights', venue:'Software Engineering & Management', year:2015, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ruzica Piskac', title:'From Decision Procedures to Synthesis Procedures', venue:'SYNASC', year:2015, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ruzica Piskac, Thomas Wies, Damien Zufferey', title:'Automating Separation Logic with Trees and Data', venue:'CAV', year:2014, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ruzica Piskac', title:'The FMCAD 2014 graduate student forum', venue:'FMCAD', year:2014, pdf:'#', bib:'#', themes:['mlai'] },
+  { authors:'Ruzica Piskac, Thomas Wies, Damien Zufferey', title:'GRASShopper - Complete Heap Verification with Mixed Specifications', venue:'TACAS', year:2014, pdf:'#', bib:'#', themes:['mlai'] },
 ];
 
 const PublicationsPage = ({ tweaks }) => {
