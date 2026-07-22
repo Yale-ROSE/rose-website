@@ -2,7 +2,8 @@
 // Header.jsx, ROSE Lab top navigation bar
 function Header({ activePage, onNav }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  const navLinks = ['Home', 'Research', 'Publications', 'Funding', 'Team'];
+  // const navLinks = ['Home', 'Research', 'Publications', 'Funding', 'Team'];
+  const navLinks = ['Home', 'Publications', 'Team'];
 
   // Brand block width = sidebar width (220) + page-layout gap (48) = 268,
   // so the first nav link aligns with the main content column underneath.
