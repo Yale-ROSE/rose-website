@@ -347,14 +347,14 @@ const TeamPage = ({ tweaks }) => {
   const students = members.filter(m => m.group === 'student');
   const renderMember = m => (
     <div key={m.name} style={{ display: 'flex', gap: 16, marginBottom: 20, paddingBottom: 20, borderBottom: '1px solid #e8e8e4' }}>
-      <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 18, fontWeight: 600, color: '#286DC0', marginBottom: 2 }}>
+      <div style={{ width: 52, height: 52, background: '#dce9f5', border: '1px solid #e8e8e4', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 19, fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", color: '#286DC0', fontWeight: 500 }}>
+        {m.name.split(' ').map(w => w[0]).join('').slice(0, 2)}
+      </div>
+      <div>
+        <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 18, fontWeight: 600, color: '#286DC0', marginBottom: 2 }}>
           {m.url && m.url !== '#'
             ? <a href={m.url} target="_blank" rel="noopener noreferrer" style={{ color: '#286DC0' }}>{m.name}</a>
             : m.name}
-        </div>
-      <div>
-        <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 18, fontWeight: 600, color: '#286DC0', marginBottom: 2 }}>
-          <a href={m.url} style={{ color: '#286DC0' }}>{m.name}</a>
         </div>
         <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 16, color: '#3a3a38', marginBottom: m.research ? 2 : 0 }}>{m.role}</div>
         {m.research ? <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 14, color: '#767674' }}>{m.research}</div> : null}
