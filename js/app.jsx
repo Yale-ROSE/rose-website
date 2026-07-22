@@ -94,7 +94,7 @@ const HomePage = ({ tweaks }) => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px 24px' }}>
             {[
               ['Scott Shapiro', 'Yale Law School'],
-              ['Hyunghoon Cho', 'Biomedical Informatics & Data Science'],
+              ['Hyunghoon Cho', 'Yale BIDS'],
               ['Mariana Raykova', 'Google'],
               ['Xiao Wang', 'Northwestern'],
               ['Eran Tromer', 'Boston University'],
@@ -103,9 +103,9 @@ const HomePage = ({ tweaks }) => {
               ['Bettina Könighofer', 'TU Graz'],
               ['Shafi Goldwasser', 'UC Berkeley / MIT'],
               ['Byron Cook', 'AWS Automated Reasoning'],
-              ['Dan Esty', 'Yale Environmental Performance Index'],
-              ['Zach Wendling', 'Yale Environmental Performance Index'],
-              ['Kyle Jensen', 'Yale School of Management'],
+              ['Dan Esty', 'Yale EPI'],
+              ['Zach Wendling', 'Yale EPI'],
+              ['Kyle Jensen', 'Yale SOM'],
             ].map(([name, inst]) => (
               <div key={name} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, lineHeight: 1.4, marginBottom: 4 }}>
                 <div style={{ color: '#1a1a1a' }}>{name}</div>
