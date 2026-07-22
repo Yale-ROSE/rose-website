@@ -189,6 +189,8 @@ const themeTagMeta = {
   mlai:    { label: 'ML/AI + FM',    color: '#2a7a3b' },
   neuro:   { label: 'Neurosymbolic AI',  color: '#6b3fa0' },
   law:     { label: 'Accountability',    color: '#8a6000' },
+  verification: { label: 'Verification', color: '#0f766e' },
+  security:     { label: 'Security',     color: '#a03030' },
 };
 
 const PubEntry = ({ n, authors, title, venue, year, bib, doi, http, arxiv, pdf, themes }) => {
