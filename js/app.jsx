@@ -362,13 +362,13 @@ const TeamPage = ({ tweaks }) => {
   );
 
   const alumni = [
-    { name: 'Ferhat Erata', dest: 'Applied Scientist, AWS Agentic AI, Automated Reasoning Group \& Kiro Science', 'PhD 2025' , 'https://ferhat.ai'},
-    { name: 'John Kolesar', dest: 'Applied Scientist, AWS Automated Reasoning Group, Bespoke Proofs', 'PhD 2026', 'https://johnckolesar.github.io'},
-    { name: 'Samuel Judson', dest: 'Machine Learning Security Researcher at Trail of Bits', 'PhD 2024' , 'https://sjudson.com'},
-    { name: 'Jialu Zhang', dest: 'Assistant Professor at University of Waterloo', 'PhD 2023', 'https://jialuzhang.netlify.app'},
-    { name: 'Ning Luo', dest: 'Assistant Professor at the University of Illinois Urbana-Champaign', 'PhD 2022', 'https://ning0luo.github.io'},
-    { name: 'Bill Hallahan', dest: 'Assistant Professor at Binghamton University', 'PhD 2022', 'https://billhallahan.github.io'},
-    { name: 'Mark Santolucito', dest: 'Assistant Professor at Barnard College of Columbia University', 'PhD 2020' , 'https://www.marksantolucito.com'},
+    { name: 'Ferhat Erata', dest: 'Applied Scientist, AWS Agentic AI, Automated Reasoning Group \& Kiro Science', year: 'PhD 2025' , url: 'https://ferhat.ai'},
+    { name: 'John Kolesar', dest: 'Applied Scientist, AWS Automated Reasoning Group, Bespoke Proofs', year: 'PhD 2026', url: 'https://johnckolesar.github.io'},
+    { name: 'Samuel Judson', dest: 'Machine Learning Security Researcher at Trail of Bits', year: 'PhD 2024' , url: 'https://sjudson.com'},
+    { name: 'Jialu Zhang', dest: 'Assistant Professor at University of Waterloo', year: 'PhD 2023', url: 'https://jialuzhang.netlify.app'},
+    { name: 'Ning Luo', dest: 'Assistant Professor at the University of Illinois Urbana-Champaign', year: 'PhD 2022', url: 'https://ning0luo.github.io'},
+    { name: 'Bill Hallahan', dest: 'Assistant Professor at Binghamton University', year: 'PhD 2022', url: 'https://billhallahan.github.io'},
+    { name: 'Mark Santolucito', dest: 'Assistant Professor at Barnard College of Columbia University', year: 'PhD 2020' , url: 'https://www.marksantolucito.com'},
     // { name: 'Alex Reinking', dest: 'UC Berkeley' },
     // { name: 'Anton Xue', dest: 'University of Pennsylvania' },
     // { name: 'Max Levatich', dest: 'Columbia University' },
@@ -392,7 +392,7 @@ const TeamPage = ({ tweaks }) => {
         <h6 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#767674', marginBottom: 16 }}>Alumni</h6>
         {alumni.map(a => (
           <div key={a.name} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, marginBottom: 8, color: '#1a1a1a' }}>
-            {a.name} <span style={{ color: '#767674', fontSize: 16 }}>→ {a.dest}</span>
+            {a.name} <span style={{ color: '#767674', fontSize: 16 }}>→ {a.dest}</span> <span style={{ color: '#767674', fontSize: 16 }}>→ {a.year}</span>
           </div>
         ))}
       </main>
