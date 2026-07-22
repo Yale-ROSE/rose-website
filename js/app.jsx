@@ -334,14 +334,14 @@ const TeamPage = ({ tweaks }) => {
   const members = [
     { name: 'Ruzica Piskac', role: 'Principal Investigator · Zhan Tianyou Professor of Computer Science', url: 'https://www.cs.yale.edu/homes/piskac/', research: 'Programming languages, software verification, automated reasoning, code synthesis; recently extending to AI, legal reasoning, and zero-knowledge proofs', url: 'https://www.cs.yale.edu/homes/piskac/', group: 'faculty' },
     { name: 'Timos Antonopoulos', role: 'Research Scientist and Lecturer', research: 'Formal verification, automated reasoning, zero-knowledge proofs, legal accountability, MaxSAT', url: 'https://www.cs.yale.edu/homes/antonopoulos-timos/', group: 'faculty' },
-    { name: 'Topher Allen', role: 'Undergraduate Student', research: 'Formal methods for verifiable AI policy, rigorous proof techniques as evidentiary foundation for AI governance.', url: 'mailto:topher.allen@yale.edu', group: 'student' },
-    { name: 'Katie Brady', role: 'PhD Student', research: 'Automated reasoning, agentic AI systems, data proxy discovery and validation (Environmental Performance Index)', url: 'https://www.linkedin.com/in/katie-brady-7a57a4155/', group: 'student' },
-    { name: 'Sam Kouteili', role: 'PhD Student', research: 'Neurosymbolic learning, transformers for SAT solving, specification mining, EPI data-proxy pipeline', url: 'https://www.linkedin.com/in/sam-kouteili/', group: 'student' },
+    { name: 'Topher Allen', role: 'Undergraduate Student', research: 'Formal methods for verifiable AI policy, rigorous proof techniques as evidentiary foundation for AI governance.', url: '', group: 'student' },
+    { name: 'Katie Brady', role: 'PhD Student', research: 'Automated reasoning, agentic AI systems, data proxy discovery and validation (Environmental Performance Index)', url: '', group: 'student' },
+    { name: 'Sam Kouteili', role: 'PhD Student', research: 'Neurosymbolic learning, transformers for SAT solving, specification mining, EPI data-proxy pipeline', url: '', group: 'student' },
     { name: 'Daniel Luick', role: 'PhD Student', research: 'Zero-knowledge proofs, SMT verification', url: '#', group: 'student' },
-    { name: 'Stephen Miner', role: 'PhD Student', research: 'Formal methods and AI applied to biology, program synthesis and reachability analysis for cancer-cell modeling', url: 'https://www.linkedin.com/in/stephen-miner-44482a1b8/', group: 'student' },
-    { name: 'Jordan Schmerge', role: 'PhD Student', research: 'Privacy-preserving automated reasoning; MaxSAT for compliance checking', url: 'https://www.linkedin.com/in/jordan-schmerge/', group: 'student' },
+    { name: 'Stephen Miner', role: 'PhD Student', research: 'Formal methods and AI applied to biology, program synthesis and reachability analysis for cancer-cell modeling', url: '', group: 'student' },
+    { name: 'Jordan Schmerge', role: 'PhD Student', research: 'Privacy-preserving automated reasoning; MaxSAT for compliance checking', url: '', group: 'student' },
     { name: 'Thanos Typaldos', role: 'PhD Student', research: 'Neurosymbolic programming and program verification, Rust idiomaticity, learning reductions, cubing, Blaise', url: 'https://github.com/actyp', group: 'student' },
-    { name: 'Youwei Zhong', role: 'PhD Student', research: 'Custom zero-knowledge protocols for verifying safety and privacy properties of proprietary AI systems', url: 'https://www.linkedin.com/in/youwei-zhong-64102323a/', group: 'student' },
+    { name: 'Youwei Zhong', role: 'PhD Student', research: 'Custom zero-knowledge protocols for verifying safety and privacy properties of proprietary AI systems', url: '', group: 'student' },
   ];
   const faculty = members.filter(m => m.group === 'faculty');
   const students = members.filter(m => m.group === 'student');
