@@ -63,8 +63,6 @@ const HomePage = ({ tweaks }) => {
           </ResearchArea>
         </div>
 
-        <hr style={{ marginBottom: 28 }} />
-
         {/* Lab News */}
         <div style={{ marginBottom: 36 }}>
           <h2 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 28, fontWeight: 500, color: '#1a1a1a', margin: '0 0 6px' }}>Lab News</h2>
@@ -93,7 +91,7 @@ const HomePage = ({ tweaks }) => {
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '10px 24px' }}>
             {[
-              ['Scott Shapiro', 'Yale Law School'],
+              ['Scott J. Shapiro', 'Yale Law School'],
               ['Hyunghoon Cho', 'Yale BIDS'],
               ['Mariana Raykova', 'Google'],
               ['Xiao Wang', 'Northwestern'],
