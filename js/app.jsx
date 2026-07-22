@@ -5,18 +5,18 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "font": "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
 }/*EDITMODE-END*/;
 
-const projectLinks = [
-  { theme: 'privacy', title: 'ZKSMT: A VM for Proving SMT Theorems in Zero Knowledge', url: '#', desc: 'A virtual machine that lets a prover convince a verifier an SMT formula is unsatisfiable without revealing the formula or the proof. (USENIX Security 2024)' },
-  { theme: 'privacy', title: 'Coinductive ZK Proofs for Program Equivalence', url: '#', desc: 'A proof system that uses coinductive reasoning to demonstrate, in zero knowledge, that two regular expressions are equivalent. (OOPSLA 2025)' },
-  { theme: 'privacy', title: 'Privacy-Preserving SAT and MaxSAT', url: '#', desc: 'Solvers that not only return an answer but produce cryptographic evidence of correctness, enabling third-party verification without re-running the solver. (SAT 2025, CP 2025 invited talks; ASE 2025)' },
-  { theme: 'privacy', title: 'Verifiable AI: Zero-Knowledge Proofs for Private Models', url: '#', desc: 'Custom ZK protocols that prove fairness, robustness, or non-memorization of proprietary AI models without exposing their weights.' },
-  { theme: 'mlai', title: 'Learning Randomized Reductions', url: '#', desc: 'The first ML framework for automatically discovering randomized reductions, a foundational primitive underlying self-correction, average-case hardness, and side-channel resilience. (with Shafi Goldwasser; arXiv:2412.18134)' },
-  { theme: 'mlai', title: 'Learning How to Cube SAT', url: '#', desc: 'A reinforcement-learning approach to cubing, partitioning a SAT instance into parallel subproblems, that outperforms fixed heuristics on industrial-scale workloads. (with Amazon Trusted Solvers)' },
-  { theme: 'neuro', title: 'Agentic Data Proxy Discovery for the Environmental Performance Index', url: '#', desc: 'An agentic AI framework that proposes, tests, and produces verifiable arguments for environmental data proxies, applied to the Yale EPI.' },
-  { theme: 'neuro', title: 'Formal Methods for Cancer Cell Modeling', url: '#', desc: 'Program synthesis and reachability analysis applied to cancer-cell models, giving biologists simulations they can mathematically trust.' },
-  { theme: 'law', title: 'soid: Legal Accountability for Automated Decision Making', url: '#', desc: 'An SMT-based oracle that answers counterfactual questions about automated decisions in a form admissible to courts and regulators. (CAV 2024)' },
-  { theme: 'law', title: 'CourtReasoner: Can LLM Agents Reason Like Judges?', url: '#', desc: 'A benchmark for whether LLM agents can produce the structured legal reasoning that legitimizes judicial rulings, with Yale Law and Yale CS co-authors. (EMNLP 2025)' },
-];
+// const projectLinks = [
+//   { theme: 'privacy', title: 'ZKSMT: A VM for Proving SMT Theorems in Zero Knowledge', url: '#', desc: 'A virtual machine that lets a prover convince a verifier an SMT formula is unsatisfiable without revealing the formula or the proof. (USENIX Security 2024)' },
+//   { theme: 'privacy', title: 'Coinductive ZK Proofs for Program Equivalence', url: '#', desc: 'A proof system that uses coinductive reasoning to demonstrate, in zero knowledge, that two regular expressions are equivalent. (OOPSLA 2025)' },
+//   { theme: 'privacy', title: 'Privacy-Preserving SAT and MaxSAT', url: '#', desc: 'Solvers that not only return an answer but produce cryptographic evidence of correctness, enabling third-party verification without re-running the solver. (SAT 2025, CP 2025 invited talks; ASE 2025)' },
+//   { theme: 'privacy', title: 'Verifiable AI: Zero-Knowledge Proofs for Private Models', url: '#', desc: 'Custom ZK protocols that prove fairness, robustness, or non-memorization of proprietary AI models without exposing their weights.' },
+//   { theme: 'mlai', title: 'Learning Randomized Reductions', url: '#', desc: 'The first ML framework for automatically discovering randomized reductions, a foundational primitive underlying self-correction, average-case hardness, and side-channel resilience. (with Shafi Goldwasser; arXiv:2412.18134)' },
+//   { theme: 'mlai', title: 'Learning How to Cube SAT', url: '#', desc: 'A reinforcement-learning approach to cubing, partitioning a SAT instance into parallel subproblems, that outperforms fixed heuristics on industrial-scale workloads. (with Amazon Trusted Solvers)' },
+//   { theme: 'neuro', title: 'Agentic Data Proxy Discovery for the Environmental Performance Index', url: '#', desc: 'An agentic AI framework that proposes, tests, and produces verifiable arguments for environmental data proxies, applied to the Yale EPI.' },
+//   { theme: 'neuro', title: 'Formal Methods for Cancer Cell Modeling', url: '#', desc: 'Program synthesis and reachability analysis applied to cancer-cell models, giving biologists simulations they can mathematically trust.' },
+//   { theme: 'law', title: 'soid: Legal Accountability for Automated Decision Making', url: '#', desc: 'An SMT-based oracle that answers counterfactual questions about automated decisions in a form admissible to courts and regulators. (CAV 2024)' },
+//   { theme: 'law', title: 'CourtReasoner: Can LLM Agents Reason Like Judges?', url: '#', desc: 'A benchmark for whether LLM agents can produce the structured legal reasoning that legitimizes judicial rulings, with Yale Law and Yale CS co-authors. (EMNLP 2025)' },
+// ];
 
 // Pages
 const HomePage = ({ tweaks }) => {
@@ -151,27 +151,27 @@ const HomePage = ({ tweaks }) => {
   );
 };
 
-const ResearchPage = ({ tweaks }) => {
-  return (
-    <div className="page-layout" style={{ maxWidth: 1040, margin: '0 auto', padding: '40px 24px', display: 'block', gap: 48 }}>
-      <main style={{ flex: 1, minWidth: 0 }}>
-        <div style={{ marginBottom: 8 }}>
-          <h1 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 38, fontWeight: 400, margin: 0, color: '#1a1a1a' }}>Publications</h1>
-        </div>
-        <p style={{ fontSize: 18, color: '#3a3a38', lineHeight: 1.65, marginBottom: 28 }}>
-          ROSE focuses on foundational research in formal methods, program synthesis, and automated verification with real-world impact.
-        </p>
-        <hr style={{ marginBottom: 28 }} />
-        {projectLinks.map(p => (
-          <div key={p.title} style={{ marginBottom: 14, paddingBottom: 14, borderBottom: '1px solid #e8e8e4' }}>
-            <a href={p.url} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 18, fontWeight: 600, color: '#286DC0' }}>{p.title}</a>
-            <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, color: '#3a3a38', lineHeight: 1.6, marginTop: 4 }}>{p.desc}</div>
-          </div>
-        ))}
-      </main>
-    </div>
-  );
-};
+// const ResearchPage = ({ tweaks }) => {
+//   return (
+//     <div className="page-layout" style={{ maxWidth: 1040, margin: '0 auto', padding: '40px 24px', display: 'block', gap: 48 }}>
+//       <main style={{ flex: 1, minWidth: 0 }}>
+//         <div style={{ marginBottom: 8 }}>
+//           <h1 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 38, fontWeight: 400, margin: 0, color: '#1a1a1a' }}>Publications</h1>
+//         </div>
+//         <p style={{ fontSize: 18, color: '#3a3a38', lineHeight: 1.65, marginBottom: 28 }}>
+//           ROSE focuses on foundational research in formal methods, program synthesis, and automated verification with real-world impact.
+//         </p>
+//         <hr style={{ marginBottom: 28 }} />
+//         {projectLinks.map(p => (
+//           <div key={p.title} style={{ marginBottom: 14, paddingBottom: 14, borderBottom: '1px solid #e8e8e4' }}>
+//             <a href={p.url} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 18, fontWeight: 600, color: '#286DC0' }}>{p.title}</a>
+//             <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, color: '#3a3a38', lineHeight: 1.6, marginTop: 4 }}>{p.desc}</div>
+//           </div>
+//         ))}
+//       </main>
+//     </div>
+//   );
+// };
 
 const pubLink = (label, url) => url && url !== '#'
   ? <a href={url} target="_blank" rel="noopener noreferrer" style={{color:'#286DC0',textDecoration:'none',marginRight:6}} onMouseEnter={e=>{e.currentTarget.style.textDecoration='underline'}} onMouseLeave={e=>{e.currentTarget.style.textDecoration='none'}}>[{label}]</a>
