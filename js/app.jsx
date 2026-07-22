@@ -313,8 +313,7 @@ const PublicationsPage = ({ tweaks }) => {
       <main style={{ flex: 1, minWidth: 0 }}>
         <h1 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 38, fontWeight: 400, marginBottom: 8 }}>Publications</h1>
         <p style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 16, color: '#767674', marginBottom: 20 }}>
-          Entries [1]–[31] added 2020–2026; entries [32]–[88] from the original site (2005–2020).
-          Some DOI links for recent papers may require verification.
+          Entries only from 2013 onwards.
         </p>
         <hr style={{ marginBottom: 20 }} />
         <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -392,7 +391,7 @@ const TeamPage = ({ tweaks }) => {
         <h6 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#767674', marginBottom: 16 }}>Alumni</h6>
         {alumni.map(a => (
           <div key={a.name} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, marginBottom: 8, color: '#1a1a1a' }}>
-            {a.name} <span style={{ color: '#767674', fontSize: 16 }}>→ {a.dest}</span> <span style={{ color: '#767674', fontSize: 16 }}>→ {a.year}</span>
+            {a.name} <span style={{ color: '#767674', fontSize: 16 }}>({a.year})</span><span style={{ color: '#767674', fontSize: 16 }}>→ {a.dest}</span>
           </div>
         ))}
       </main>
