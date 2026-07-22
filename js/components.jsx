@@ -24,6 +24,7 @@ function Header({ activePage, onNav }) {
           display: 'flex', flexDirection: 'column', justifyContent: 'center',
           alignItems: 'flex-start', cursor: 'pointer',
           paddingRight: 16
+          
         }} onClick={() => { onNav('Home'); setMenuOpen(false); }}>
           <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
             fontSize: 28, fontWeight: 400, color: 'white',
@@ -104,9 +105,7 @@ function Footer() {
       </div>
       <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 14, color: 'rgba(255,255,255,0.5)', textAlign: 'right', lineHeight: 2 }}>
         <div>© 2026 Yale University · All rights reserved</div>
-        <a href="#" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Privacy Policy</a>
         <span style={{ margin: '0 8px', opacity: 0.4 }}>·</span>
-        <a href="#" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Accessibility</a>
       </div>
     </div>
   </footer>
