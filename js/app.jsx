@@ -292,7 +292,7 @@ const allPubs = [
   { authors:'Ruzica Piskac', title:'From Decision Procedures to Synthesis Procedures', venue:'SYNASC', year:2015, pdf:'#', bib:'#', themes:['synthesis'] },
   { authors:'Ruzica Piskac, Thomas Wies, Damien Zufferey', title:'Automating Separation Logic with Trees and Data', venue:'CAV', year:2014, pdf:'#', bib:'#', themes:['verification'] },
   { authors:'Ruzica Piskac, Thomas Wies, Damien Zufferey', title:'GRASShopper - Complete Heap Verification with Mixed Specifications', venue:'TACAS', year:2014, pdf:'#', bib:'#', themes:['verification'] },
-  { authors:'Stephen Miner, Yoshiki Takashima, Simeng Han, Sam Kouteili, Ferhat Erata, Ruzica Piskac, Scott J Shapiro', title:'Scheherazade: Evaluating Chain-of-Thought Math Reasoning in LLMs with Chain-of-Problems', venue:'NeurIPS ER Workshop', year:2025, pdf:'https://arxiv.org/pdf/2410.00151', bib:'#', themes:['mlai'] },
+  { authors:'Stephen Miner, Yoshiki Takashima, Simeng Han, Sam Kouteili, Ferhat Erata, Ruzica Piskac, Scott J. Shapiro', title:'Scheherazade: Evaluating Chain-of-Thought Math Reasoning in LLMs with Chain-of-Problems', venue:'NeurIPS ER Workshop', year:2025, pdf:'https://arxiv.org/pdf/2410.00151', bib:'#', themes:['mlai'] },
 ];
 
 const PublicationsPage = ({ tweaks }) => {
