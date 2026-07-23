@@ -93,6 +93,7 @@ const HomePage = ({ tweaks }) => {
             {[
               ['Scott J. Shapiro', 'Yale Law School'],
               ['Hyunghoon Cho', 'Yale BIDS'],
+              ['Zhong Shao', 'Yale CS'],
               ['Mariana Raykova', 'Google'],
               ['Xiao Wang', 'Northwestern'],
               ['Eran Tromer', 'Boston University'],
@@ -101,6 +102,7 @@ const HomePage = ({ tweaks }) => {
               ['Bettina Könighofer', 'TU Graz'],
               ['Shafi Goldwasser', 'UC Berkeley / MIT'],
               ['Byron Cook', 'AWS Automated Reasoning'],
+              ['Dana Angluin', 'Yale CS'],
               ['Dan Esty', 'Yale EPI'],
               ['Zach Wendling', 'Yale EPI'],
               ['Kyle Jensen', 'Yale SOM'],
