@@ -366,6 +366,8 @@ const TeamPage = ({ tweaks }) => {
     { name: 'Ning Luo', dest: 'Assistant Professor at the University of Illinois Urbana-Champaign', year: 'PhD 2022', url: 'https://ning0luo.github.io'},
     { name: 'Bill Hallahan', dest: 'Assistant Professor at Binghamton University', year: 'PhD 2022', url: 'https://billhallahan.github.io'},
     { name: 'Mark Santolucito', dest: 'Assistant Professor at Barnard College of Columbia University', year: 'PhD 2020' , url: 'https://www.marksantolucito.com'},
+    { name: 'Ennan Zhai', dest: 'Director of AI System Research at Alibaba Group', year: 'PostDoc 2020' , url: 'https://ennanzhai.github.io'},
+    { name: 'Julien Lepiller', dest: 'Security Evaluation Engineer at Thales', year: 'PostDoc 2023' , url: 'https://lepiller.eu/en//'},
     // { name: 'Alex Reinking', dest: 'UC Berkeley' },
     // { name: 'Anton Xue', dest: 'University of Pennsylvania' },
     // { name: 'Max Levatich', dest: 'Columbia University' },
