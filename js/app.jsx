@@ -126,7 +126,7 @@ const HomePage = ({ tweaks }) => {
               ['CPSC 4391 / MGT 697', 'Advanced Software Engineering', 'Timos Antonopoulos'],
             ].map(([num, ctitle, who]) => (
               <div key={num} style={{ display: 'flex', gap: 16, alignItems: 'baseline' }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 14, fontWeight: 600, color: '#286DC0', flexShrink: 0, width: 92 }}>{num}</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 14, fontWeight: 600, color: '#286DC0', flexShrink: 0, width: 150 }}>{num}</div>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 18, fontWeight: 600, color: '#1a1a1a', lineHeight: 1.35 }}>{ctitle}</div>
                   <div style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 15, color: '#767674', marginTop: 2 }}>{who}</div>
