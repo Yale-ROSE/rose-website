@@ -324,7 +324,7 @@ const PublicationsPage = ({ tweaks }) => {
         </table>
         <hr style={{ marginTop: 8, marginBottom: 16 }} />
         <p style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 14, color: '#767674', fontStyle: 'italic' }}>
-          This list was generated from rose.yale.edu/publications-0 and updated with publications through April 2026.
+          This list was last updated in July 2026.
         </p>
       </main>
     </div>
