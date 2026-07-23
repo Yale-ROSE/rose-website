@@ -103,6 +103,8 @@ const HomePage = ({ tweaks }) => {
               ['Shafi Goldwasser', 'UC Berkeley / MIT'],
               ['Byron Cook', 'AWS Automated Reasoning'],
               ['Dana Angluin', 'Yale CS'],
+              ['Bernd Finkbeiner', 'CISPA & Saarland Universit'],
+              ['Ranjit Jhala', 'UC San Diego'],
               ['Dan Esty', 'Yale EPI'],
               ['Zach Wendling', 'Yale EPI'],
               ['Kyle Jensen', 'Yale SOM'],
