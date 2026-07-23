@@ -64,7 +64,7 @@ const HomePage = ({ tweaks }) => {
           </ResearchArea>
 
           <ResearchArea title="Formal Methods for Accountable Decision-Making" url="#" thumb="" projects={allPubs.filter(p => (p.themes || []).includes('law') && p.pdf && p.pdf !== '#').sort((a, b) => b.year - a.year).slice(0, 4).map(p => ({ title: p.title, url: p.pdf && p.pdf !== '#' ? p.pdf : '#' }))}>
-            Using automated reasoning to make algorithmic decisions, whether by AI systems, by autonomous vehicles, or by software in regulated settings, legally inspectable and accountable. In a multi-year collaboration with Prof. Scott Shapiro (Yale Law School), we build SMT-based oracles and autoformalization tools that let courts and regulators interrogate software the way they interrogate witnesses. Recent papers: <em>soid</em> (CAV 2024), <em>"Put the Car on the Stand": SMT-based Oracles for Investigating Decisions</em> (CSLAW 2024), <em>Scheherazade</em>, and <em>CourtReasoner: Can LLM Agents Reason Like Judges?</em> (EMNLP 2025).
+            When software decides something consequential the legal system needs to interrogate that decision the way it interrogates a witness. That requires translating legal questions into formal ones. In collaboration with Yale Law School, we build SMT-based oracles that answer counterfactual questions about automated decisions in a form usable as evidence, autoformalization tools that turn statutory and contractual language into logical specifications, and benchmarks probing whether language models can produce the structured reasoning that legitimizes a ruling.
           </ResearchArea>
         </div>
 
