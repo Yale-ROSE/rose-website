@@ -126,7 +126,7 @@ const HomePage = ({ tweaks }) => {
               [['CPSC 4391 / 5391', 'MGT 697'], 'Advanced Software Engineering', 'Timos Antonopoulos'],
             ].map(([nums, ctitle, who]) => (
               <div key={nums[0]} style={{ display: 'flex', gap: 16, alignItems: 'baseline' }}>
-                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 14, fontWeight: 600, color: '#286DC0', flexShrink: 0, width: 120, lineHeight: 1.5 }}>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 14, fontWeight: 600, color: '#286DC0', flexShrink: 0, width: 170, lineHeight: 1.5 }}>
                   {nums.map(n => <div key={n}>{n}</div>)}
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
