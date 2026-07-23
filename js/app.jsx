@@ -120,10 +120,10 @@ const HomePage = ({ tweaks }) => {
           <h6 style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 13, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#767674', margin: '0 0 14px' }}>Teaching</h6>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             {[
-              [['CPSC 4540', 'CPSC 5540'], 'Software Analysis and Verification', 'Ruzica Piskac'],
-              [['CPSC 4150', 'CPSC 5150'], 'Law and Large Language Models', 'Ruzica Piskac & Scott Shapiro'],
-              [['CPSC 4390', 'CPSC 5390'], 'Software Engineering', 'Timos Antonopoulos'],
-              [['CPSC 4391', 'CPSC 5391', 'MGT 697'], 'Advanced Software Engineering', 'Timos Antonopoulos'],
+              [['CPSC 4540 / 5540'], 'Software Analysis and Verification', 'Ruzica Piskac'],
+              [['CPSC 4150 / 5150'], 'Law and Large Language Models', 'Ruzica Piskac & Scott Shapiro'],
+              [['CPSC 4390 / 5390'], 'Software Engineering', 'Timos Antonopoulos'],
+              [['CPSC 4391 / 5391', 'MGT 697'], 'Advanced Software Engineering', 'Timos Antonopoulos'],
             ].map(([nums, ctitle, who]) => (
               <div key={nums[0]} style={{ display: 'flex', gap: 16, alignItems: 'baseline' }}>
                 <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 14, fontWeight: 600, color: '#286DC0', flexShrink: 0, width: 120, lineHeight: 1.5 }}>
