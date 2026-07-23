@@ -107,13 +107,16 @@ const HomePage = ({ tweaks }) => {
               ['Bettina Könighofer', 'TU Graz'],
               ['Shafi Goldwasser', 'UC Berkeley / MIT'],
               ['Byron Cook', 'AWS Automated Reasoning'],
+              ['Jinyang Li', 'New York University'],
+              ['Zhaoguo Wang', 'Shanghai Jiao Tong University'],
+              ['James Zheng', 'Macquarie University'],
               ['Dana Angluin', 'Yale CS'],
               ['Bernd Finkbeiner', 'CISPA & Saarland Universit'],
               ['Ranjit Jhala', 'UC San Diego'],
               ['Dan Esty', 'Yale EPI'],
               ['Zach Wendling', 'Yale EPI'],
               ['Kyle Jensen', 'Yale SOM'],
-            ].map(([name, inst]) => (
+            ].sort((a, b) => a[0].split(' ').pop().localeCompare(b[0].split(' ').pop())).map(([name, inst]) => (
               <div key={name} style={{ fontFamily: "'Mallory', system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif", fontSize: 17, lineHeight: 1.4, marginBottom: 4 }}>
                 <div style={{ color: '#1a1a1a' }}>{name}</div>
                 <div style={{ color: '#767674', fontSize: 14 }}>{inst}</div>
