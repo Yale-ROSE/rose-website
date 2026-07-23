@@ -200,7 +200,7 @@ function ResearchArea({ title, url, thumb, projects, children }) {
         {thumb && (
           <div className="research-thumb" style={{
             width: 240, flexShrink: 0, alignSelf: 'stretch',
-            background: '#f4f3ef', border: '1px solid #e8e8e4',
+            background: '#ffffff', border: '0px solid #e8e8e4',
             overflow: 'hidden'
           }}>
             <img src={thumb} alt={title} style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'top center', display: 'block' }} />
