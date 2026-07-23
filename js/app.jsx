@@ -207,8 +207,8 @@ const PubEntry = ({ n, authors, title, venue, year, bib, doi, http, arxiv, pdf, 
       {(pdf||hasBib||doi||http||arxiv) && <span style={{marginLeft:4}}>
         {pdf && pubLink('pdf', pdf)}
         {hasBib && pubLink('bib', bib)}
-        {doi && pubLink('DOI', doi)}
-        {(http||arxiv) && pubLink('http', http||arxiv)}
+        {/* {doi && pubLink('DOI', doi)} */}
+        {/* {(http||arxiv) && pubLink('http', http||arxiv)} */}
       </span>}
       {tags.length > 0 && <div style={{marginTop:7,display:'flex',flexWrap:'wrap',gap:6}}>
         {tags.map((theme, i) => (
