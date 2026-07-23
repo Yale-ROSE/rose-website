@@ -228,7 +228,7 @@ const PubEntry = ({ n, authors, title, venue, year, bib, doi, http, arxiv, pdf, 
 
 
 const allPubs = [
-  { authors: 'Timos Antonopoulos, Ning Luo, Ruzica Piskac', title: 'Towards Privacy-Preserving Verification', venue:'FM', year: 2026, pdf: '', bib:'https://dblp.org/rec/conf/fm/AntonopoulosLP26.html?view=bibtex', themes:['privacy'] },
+  { authors:'Timos Antonopoulos, Ning Luo, Ruzica Piskac', title: 'Towards Privacy-Preserving Verification', venue:'FM', year: 2026, pdf: '', bib:'https://dblp.org/rec/conf/fm/AntonopoulosLP26.html?view=bibtex', themes:['privacy'] },
   { authors:'Ferhat Erata, Orr Paradise, Thanos Typaldos, Timos Antonopoulos, ThanhVu Nguyen, Shafi Goldwasser, Ruzica Piskac', title:'Learning Randomized Reductions', venue:'ICML', year:2026, pdf:'https://www.cs.yale.edu/homes/antonopoulos-timos/ICML-2026.pdf', bib:'#', themes:['mlai', 'neuro'] },
   { authors:'Haris Smajlović, Kyle Sheng, Timos Antonopoulos, Ruzica Piskac, Hyunghoon Cho', title:'Decor: Delegated Computation on Randomness for Secure Evaluation of Nonlinear Functions', venue:'IEEE S&P', year:2026, pdf:'https://www.cs.yale.edu/homes/antonopoulos-timos/SP-2026.pdf', bib:'https://dblp.org/rec/conf/sp/SmajlovicSAPC26.html?view=bibtex', themes:['privacy'] },
   { authors:'Zhaoxiang Liu, Samuel Judson, Raj Dutta, Mark Santolucito, Xiaolong Guo, Ning Luo', title:'BlindMarket: Enabling Verifiable, Confidential, and Traceable IP Core Distribution in Zero-Trust Settings', venue:'HOST', year:2026, pdf:'https://sjudson.com/docs/blindmarket_host2026.pdf', doi:'https://ieeexplore.ieee.org/document/11604624', arxiv:'https://arxiv.org/abs/2603.22685', bib:'#', themes:['privacy'] },
