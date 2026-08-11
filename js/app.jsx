@@ -84,8 +84,6 @@ const HomePage = ({ tweaks }) => {
           ))}
         </div>
 
-        <hr style={{ marginBottom: 28 }} />
-
         {/* Collaborators */}
         <div style={{ marginBottom: 36 }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 12 }}>
