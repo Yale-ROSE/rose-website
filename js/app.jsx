@@ -125,7 +125,7 @@ const HomePage = ({ tweaks }) => {
           </div>
         </div>
 
-        <hr style={{ marginBottom: 28 }} />
+        <!--<hr style={{ marginBottom: 28 }} />-->
 
         {/* Teaching */}
         <div style={{ marginBottom: 36 }}>
