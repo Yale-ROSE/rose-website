@@ -26,8 +26,8 @@ const HomePage = ({ tweaks }) => {
         {/* Lab intro */}
         <p style={{ fontSize: 18, color: '#3a3a38', lineHeight: 1.65, marginBottom: 28 }}>
           The ROSE group is part of the{' '}
-          <a href="#">Computer Science Department</a> at{' '}
-          <a href="#">Yale University</a>.
+          <a href="https://engineering.yale.edu/academic-study/departments/computer-science">Computer Science Department</a> at{' '}
+          <a href="https://www.yale.edu">Yale University</a>.
           We use <strong>formal methods and automated reasoning</strong> (SAT/SMT, symbolic execution, theorem proving, and cryptography) to analyze systems of every kind, from software and networks to machine-learning and AI models, so that they can be shown to be correct, understood clearly, and held within trustworthy, private, and accountable bounds.
         </p>
 
