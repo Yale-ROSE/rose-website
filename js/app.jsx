@@ -445,6 +445,7 @@ const newsItems = [
   // the page title refreshes automatically from the most recent item's date,
   // so there is nothing else to change. Keep dates in YYYY-MM-DD format.
   // Tags: Paper | Award | Talk | Service | Member | Alumni
+  { date: '2026-09-23', tag: 'Paper',   title: 'PANDA (Scalable ZKPs for Neural Network Guarantees) Accepted to NeurIPS 2026', body: 'Certified but Private: Scalable Zero-Knowledge Proofs for Neural Network Guarantees has been accepted to NeurIPS 2026' },
   { date: '2026-05-28', tag: 'Alumni',  title: 'John Kolesar joins AWS', body: 'John Kolesar (PhD 2025) has joined Amazon Web Services as an Applied Scientist.' },
   { date: '2025-07-01', tag: 'Paper',   title: 'Proofs of Regular Expression Equivalence in ZK appears at OOPSLA 2025', body: 'Coinductive Proofs of Regular Expression Equivalence in Zero Knowledge appears at OOPSLA 2025.' },
   { date: '2025-06-20', tag: 'Alumni',  title: 'Ferhat Erata completes his PhD', body: 'Ferhat Erata defended his dissertation and joined the AWS AI Automated Reasoning group as an Applied Scientist.' },
